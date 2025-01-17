@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio de Design</title>
+    <link rel="stylesheet" href="style.css/style.css">
+</head>
+<body>
+    <header>
+        <h1>Portfolio Cisco Design</h1>
+        <p>Transformando suas ideias em realidade visual.</p>
+        <nav>
+            <a href="#about">Sobre</a>
+            <a href="#gallery">Galeria</a>
+            <a href="#contact">Contato</a>
+        </nav>
+    </header>
+
+    <div class="container">
+        <section id="about" class="section">
+            <h2>Sobre Mim</h2>
+            <div class="about-content">
+                <img src="images/dfdhghd.jpeg" alt="Minha Foto" class="about-photo">
+                <p>Sou o Pedro, um designer recém-formado apaixonado por criar experiências visuais únicas. Minha missão é dar vida às ideias através do design criativo e funcional. Tenho experiência em design gráfico para mídias digitais ou impressas, sempre buscando novos desafios para explorar minha criatividade.</p>
+            </div>
+        </section>
+
+        <section id="gallery" class="section">
+            <h2>Galeria</h2>
+            <p>Confira alguns dos meus trabalhos visuais.</p>
+            <div class="gallery">
+                <img src="images/WhatsApp Image 2025-01-16 at 21.31.43 (1).jpeg" alt="Imagem 1" class="gallery-item">
+                <img src="images/WhatsApp Image 2025-01-16 at 21.31.43.jpeg" alt="Imagem 2" class="gallery-item">
+                <img src="images/WhatsApp Image 2025-01-16 at 21.31.42.jpeg" alt="Imagem 3" class="gallery-item">
+                <img src="images/WhatsApp Image 2025-01-16 at 21.31.41 (1).jpeg" alt="Imagem 4" class="gallery-item">
+                <img src="images/WhatsApp Image 2025-01-16 at 21.31.41.jpeg" alt="Imagem 5" class="gallery-item">
+                <img src="images/WhatsApp Image 2025-01-16 at 21.31.42 (1).jpeg" alt="Imagem 6" class="gallery-item">
+                <img src="images/WhatsApp Image 2025-01-16 at 21.31.41 (2).jpeg" alt="Imagem 7" class="gallery-item">
+                <img src="images/WhatsApp Image 2025-01-16 at 21.31.40 (1).jpeg" alt="Imagem 8" class="gallery-item">
+                <img src="images/WhatsApp Image 2025-01-16 at 21.31.40.jpeg" alt="Imagem 9" class="gallery-item">
+                <img src="images/arteofta.png" alt="Imagem 10" class="gallery-item">
+                <img src="images/graphic tee-Recuperado.png" alt="Imagem 11" class="gallery-item">
+            </div> 
+            <!-- Modal -->
+<div id="imageModal" class="modal">
+    <span class="close">&times;</span>
+    <img class="modal-content" id="modalImage">
+            </div>
+        </section>
+
+        <section id="contact" class="section">
+            <h2>Contato</h2>
+            <p>Entre em contato para saber mais sobre meu trabalho ou discutir como posso ajudar no seu próximo projeto.</p>
+            <p><strong>Email:</strong> <a href="mailto:pedrofrancisco.santanaa@gmail.com">pedrofrancisco.santanaa@gmail.com</a></p>
+            <p><strong>Telefone:</strong> <a href="tel:+5511976452720">+55 (11) 976452720</a></p>
+        </section>
+        
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Portfolio de Design. Desenvolvido por Pedro Francisco.</p>
+    </footer>
+    <script>
+        window.onload = function() {
+            // Obter os elementos da galeria e do modal
+            var modal = document.getElementById('imageModal');
+            var modalImg = document.getElementById('modalImage');
+            var closeBtn = document.getElementsByClassName('close')[0];
+    
+            // Obter todas as imagens da galeria
+            var images = document.querySelectorAll('.gallery-item');
+    
+            // Adicionar evento de clique em cada imagem
+            images.forEach(function(image) {
+                image.onclick = function() {
+                    modal.style.display = "flex"; // Exibir o modal
+                    modalImg.src = this.src; // Definir a imagem no modal
+                };
+            });
+    
+            // Fechar o modal ao clicar no botão de fechar
+            closeBtn.onclick = function() {
+                modal.style.display = "none"; // Esconder o modal
+            }
+    
+            // Fechar o modal se o usuário clicar fora da imagem
+            window.onclick = function(event) {
+                if (event.target == modal) {
+                    modal.style.display = "none"; // Esconder o modal
+                }
+            }
+        }
+    </script>
+   
+</body>
+</html>
